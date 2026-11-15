@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Darling! 💙</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+*{box-sizing:border-box}
+:root{--pink:#69b7f5;--deep:#1769aa;--cream:#f5fbff}
+body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:#183b5b;overflow-x:hidden;background:radial-gradient(circle at 15% 15%,#d9efff,transparent 35%),radial-gradient(circle at 85% 80%,#c6e5ff,transparent 35%),linear-gradient(135deg,#ffffff,#eaf6ff 55%,#f8fcff)}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative;isolation:isolate}
+.glow{position:absolute;width:280px;height:280px;border-radius:50%;background:#83c8ff;filter:blur(90px);opacity:.32;z-index:-1}
+.glow.one{top:4%;left:-100px}.glow.two{right:-100px;bottom:2%;background:#a9d8ff}
+.floating{position:fixed;z-index:-1;bottom:-40px;animation:floatUp linear infinite;opacity:.65;pointer-events:none}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.intro{text-align:center;max-width:600px;animation:fadeIn 1s ease both}
+.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:700;color:#397eae}
+h1{font-family:'Playfair Display',serif;font-size:clamp(42px,9vw,76px);line-height:1.04;margin:18px 0 12px;color:#174f80}
+h1 span{display:block;color:#3b91d0}
+.subtitle{font-size:15px;color:#527895;margin:0 auto 30px;line-height:1.7}
+.gift{font-size:65px;display:block;margin:20px auto 24px;filter:drop-shadow(0 10px 12px #68b8f755);animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(4deg)}}
+.open-btn{border:0;border-radius:999px;padding:17px 36px;background:linear-gradient(135deg,#69baf4,#1769aa);color:white;font-weight:700;font-size:15px;letter-spacing:1.5px;cursor:pointer;box-shadow:0 12px 28px #287fbd55;transition:.25s}
+.open-btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 17px 32px #287fbd66}
+.hint{font-size:12px;color:#7299b5;margin-top:18px}
+#letterScreen{display:none}
+.letter-wrap{width:min(650px,100%);animation:pop .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:none}}
+.letter{position:relative;background:#fffdfd;border:1px solid #c9e7fb;border-radius:26px;padding:clamp(25px,6vw,48px);box-shadow:0 22px 70px #397eae20;text-align:center;overflow:hidden}
+.letter:before{content:"";position:absolute;inset:8px;border:1px solid #e0f1fc;border-radius:19px;pointer-events:none}
+.top-heart{font-size:35px;margin-bottom:8px}
+.kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#4c91bf;font-weight:700}
+.letter h2{font-family:'Playfair Display',serif;font-size:clamp(31px,6vw,47px);line-height:1.12;color:#174f80;margin:13px 0 20px}
+.message{font-size:clamp(15px,2.5vw,17px);line-height:2;color:#365d7b;position:relative;margin:0 auto;max-width:510px}
+.message .pink{color:#1976b9;font-weight:700}
+.signature{font-family:'Playfair Display',serif;font-size:25px;color:#247bb5;margin-top:24px;font-style:italic}
+.bottom{margin-top:25px;color:#5a9bc8;font-size:20px;letter-spacing:7px}
+.back{background:transparent;border:1px solid #9bcbed;color:#236b9e;border-radius:30px;padding:11px 20px;margin-top:20px;cursor:pointer;font-weight:600}
+.confetti{position:fixed;top:-15px;width:9px;height:13px;z-index:5;pointer-events:none;animation:fall 3.4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.15}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@media(max-width:480px){.letter{padding:30px 23px}.message{line-height:1.85}.subtitle{max-width:300px}}
+</style>
+</head>
+<body>
+<div class="glow one"></div><div class="glow two"></div>
+<main id="introScreen" class="screen">
+  <section class="intro">
+    <div class="eyebrow">A little surprise for someone special</div>
+    <span class="gift">🎁</span>
+    <h1>HAPPY <span>BIRTHDAY!</span></h1>
+    <p class="subtitle">Someone has a very special message for you…<br>Ready to unwrap your surprise? 🥹</p>
+    <button class="open-btn" onclick="openSurprise()">OPEN IT 💌</button>
+    <div class="hint">✨ Made with lots of love ✨</div>
+  </section>
+</main>
+<main id="letterScreen" class="screen">
+  <section class="letter-wrap">
+    <article class="letter">
+      <div class="top-heart">💙</div>
+      <div class="kicker">A message from the heart</div>
+      <h2>Happiest Birthday,<br>Darlinggg! 🥹💙</h2>
+      <p class="message">
+        <span class="pink">HAPPPIESTTT BIRTHDAYYY DARLINGGG😭💙</span>
+        this special effort for youuuu as i love you to the moon and backkkkk babbyboy
+        celebrating ur 16th in 2023 to celebrating your 19th in 2026 is the biggest win i guess!!!🥹🩷
+        thankyouuu soo muchh for being my better half in everyy situation
+        may allah gives you much more success and achievements
+        <span class="pink">ONCE AGAIN HAPPYYY BIRTHDAYYYY BABY😭✨💙🫀 I LOVE YOUU SOOO MUCHHH :)</span>
+      </p>
+      <div class="signature">Forever special 💙</div>
+      <div class="bottom">♡ ✦ ♡ ✦ ♡</div>
+    </article>
+    <div style="text-align:center"><button class="back" onclick="goBack()">↶ Read it again</button></div>
+  </section>
+</main>
+<script>
+function hearts(){
+ const symbols=['♡','💙','🩵','✨','❄️'];
+ for(let i=0;i<24;i++){
+  const el=document.createElement('div');el.className='floating';
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.fontSize=(15+Math.random()*20)+'px';
+  el.style.animationDuration=(7+Math.random()*8)+'s';
+  el.style.animationDelay=(-Math.random()*12)+'s';
+  document.body.appendChild(el);
+ }
+}
+function confetti(){
+ const symbols=['💙','🩵','✨','❄️','🤍'];
+ for(let i=0;i<65;i++){
+  const el=document.createElement('div');el.className='confetti';
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.animationDelay=(Math.random()*.8)+'s';
+  el.style.fontSize=(12+Math.random()*15)+'px';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),4500);
+ }
+}
+function openSurprise(){
+ document.getElementById('introScreen').style.display='none';
+ document.getElementById('letterScreen').style.display='flex';
+ confetti();
+}
+function goBack(){
+ document.getElementById('letterScreen').style.display='none';
+ document.getElementById('introScreen').style.display='flex';
+}
+hearts();
+</script>
+</body>
+</html>
